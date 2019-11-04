@@ -255,7 +255,9 @@ public class Main extends Activity implements OnClickListener,
     }
 
     public void onClick(View view) {
-        String src = source.getText().toString();
+//        String src = source.getText().toString();
+        String src = "TestUtil = luajava.bindClass(\"sk.kottman.androlua.TestUtil\");\n" +
+                "    TestUtil:show(3)";
         status.setText("");
         try {
             String res = evalLua(src);
